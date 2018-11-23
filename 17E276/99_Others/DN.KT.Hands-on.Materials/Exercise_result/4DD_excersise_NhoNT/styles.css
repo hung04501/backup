@@ -1,0 +1,89 @@
+#main {
+    width: 1208px;
+}
+
+#div1 {
+    margin-top: 38px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 119px;
+}
+
+#menu {
+    width: 32px;
+    height: 23px;
+    float: left;
+    background-image: url("../images/menu.png");
+    background-size: cover;
+}
+
+#reserve {
+    width: 144px;
+    height: 32px;
+    float: right;
+    background-color: #41b6e6;
+    border-radius: 16px 16px 16px 16px;
+    color: #ffffff;
+    line-height: 32px;
+}
+
+#reserve p {
+    line-height: 32px;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+#h1 {
+    width: 1024px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #cce198;
+    margin-bottom: 122px;
+}
+
+#article {
+    width: 1024px;
+    height: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00b7ee;
+    margin-top: 122px;
+}
+
+#pager {
+    width: 300px;
+    height: 40px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagerlink {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    border-radius: 50%;
+}
+
+.pagerlink:hover {
+    background-color: green;
+    border-radius: 50%;
+}
+
+.select {
+    background-color: #ffde00;
+    border-radius: 50%;
+}
+
+.pagerlink>a {
+    color: #41b6e6;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}

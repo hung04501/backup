@@ -1,0 +1,26 @@
+<div class="todoapp-wrapper">
+  <section class="todoapp">
+    <header class="header">
+      <h1>todos</h1>
+      <input appFrAutocomplete class="new-todo" #newTodo placeholder="What needs to be done?" autofocus>
+    </header>
+    <section class="main">
+      <ul class="todo-list">
+        <li *ngFor="let todo of todos" [class.completed]="todo.completed">
+          <div class="view">
+            <input class="toggle" type="checkbox" (click)="toggleCompleteTodo(todo.id, !todo.completed)" [checked]="todo.completed">
+            <label>{{ todo.content }}</label>
+            <button class="destroy" (click)="deleteTodo(todo.id)"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+<div>
+  <div>Current Count Value: {{ counter }}</div>
+  <a href="#" (click)="handleCounter(1)" >Increment</a>
+  <a href="#" (click)="handleCounter(2)">Decrement</a>
+  <a href="#" (click)="handleCounter(3)">Reset</a>
+</div>

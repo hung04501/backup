@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+</head>
+<style>
+  #main {
+    background-color: #f6f6f6;
+    width: 1280px;
+    height: 1483px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: auto;
+  }
+
+  #top {
+    background-color: #cce198;
+    margin-top: 120px;
+    margin-left: 128px;
+    margin-right: 128px;
+    width: 1024px;
+    height: 280px;
+    position: absolute;
+  }
+
+  #bot {
+    background-color: #00b7ee;
+    margin-top: 525px;
+    margin-left: 128px;
+    margin-right: 128px;
+    width: 1024px;
+    height: 730px;
+    position: absolute;
+  }
+
+  #image {
+    margin-left: 40px;
+    margin-top: 44px;
+    width: 32px;
+    height: 25px;
+  }
+
+  #imageReserve {
+    margin-left: 1024px;
+    margin-top: 38px;
+    width: 145px;
+    height: 35px;
+  }
+
+  #header {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  #imageFoot {
+    text-align: center;
+    margin-top: 1288px;
+
+
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div id="main">
+      <div id="header">
+        <img id="image" src="menu.png">
+        <img id="imageReserve" src="reserve.png">
+      </div>
+      <div id="top">
+      </div>
+      <div id="bot">
+      </div>
+      <div id="imageFoot">
+        <img src="foot.png" style="width: 290px;height: 40px;">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

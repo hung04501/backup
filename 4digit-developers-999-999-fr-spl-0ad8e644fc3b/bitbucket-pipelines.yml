@@ -1,0 +1,56 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: timbru31/java-node:latest
+
+options:
+  max-time: 10
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script: # It had better we can run only on PR but not yet implemented... => https://bitbucket.org/site/master/issues/13438/add-specific-pipelines-configuration-for?_ga=2.143329907.736391963.1510535950-1125684501.1441110329#comment-40276332
+          - apt-get update; apt-get install -y gettext-base;
+          - echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
+          - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+          - set -x && apt-get update && apt-get install -y xvfb google-chrome-stable
+          - wget -q -O /usr/bin/xvfb-chrome https://bitbucket.org/atlassian/docker-node-chrome-firefox/raw/ff180e2f16ea8639d4ca4a3abb0017ee23c2836c/scripts/xvfb-chrome
+          - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
+          - chmod 755 /usr/bin/google-chrome
+          - npm i yarn -g
+          - yarn
+          - yarn sasslint
+          - yarn lint
+          - set +e
+          - yarn test --no-watch --single-run --cc
+          - set -e
+          - chmod 777 -R ./node_modules
+          - ls -la /opt/atlassian/pipelines/agent/build/node_modules/sonar-scanner/bin
+          - yarn sonar -X -Dsonar.bitbucket.repoSlug=$BITBUCKET_REPO_SLUG -Dsonar.bitbucket.accountName=$BITBUCKET_REPO_OWNER -Dsonar.bitbucket.oauthClientKey=$OAUTH_CLIENT_KEY -Dsonar.bitbucket.oauthClientSecret=$OAUTH_CLIENT_SECRET -Dsonar.bitbucket.branchName=$BITBUCKET_BRANCH -Dsonar.analysis.mode=issues
+  branches:
+    dev/master:
+      - step:
+          caches:
+            - node
+          script:
+            - apt-get update; apt-get install -y gettext-base;
+            - echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
+            - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+            - set -x && apt-get update && apt-get install -y xvfb google-chrome-stable
+            - wget -q -O /usr/bin/xvfb-chrome https://bitbucket.org/atlassian/docker-node-chrome-firefox/raw/ff180e2f16ea8639d4ca4a3abb0017ee23c2836c/scripts/xvfb-chrome
+            - ln -sf /usr/bin/xvfb-chrome /usr/bin/google-chrome
+            - chmod 755 /usr/bin/google-chrome
+            - npm i yarn -g
+            - yarn
+            - yarn sasslint
+            - yarn lint
+            - set +e
+            - yarn test --no-watch --single-run --cc
+            - set -e
+            - chmod 777 -R ./node_modules
+            - ls -la /opt/atlassian/pipelines/agent/build/node_modules/sonar-scanner/bin
+            - yarn sonar -X

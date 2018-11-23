@@ -1,0 +1,72 @@
+<%- include("/organisms/head/head", {title: "パスワードの再設定 メール送信完了 ┃ ippo-ippo WEB"}) %>
+<div class="o-content o-content--no-sidebar">
+  <div class="o-content__inner">
+    <%- include("/organisms/header/header") %>
+    <main class="o-main">
+      <%- include("/organisms/sidebar/sidebar") %>
+      <div class="o-grid-container">
+        <div class="o-grid-row">
+          <div class="o-grid-col o-grid-col-sm-12">
+            <section class="o-card">
+              <form action="#" data-parsley-validate="" class="o-form">
+                    <div class="o-grid-container">
+                      <div class="o-grid-row">
+                        <div class="o-grid-col o-grid-col-sm-12 o-grid-col--narrow-center">
+                          <%- include("/molecules/heading/heading", {title: "お問い合わせ", titleEn: "Contact", subHtml: ""}) %>
+                          <%- include("/molecules/heading/heading--lv2", {title: "お問合わせの種別を選んでください。", subHtml: ""}) %>
+                          <div class="m-form-block m-form-block--radio">
+                            <div class="m-form-block__body">
+                              <%- include("/atoms/input/input-radio",{
+                                text: "サービスの使い方に関するお問い合わせ",
+                                id: "radioid1",
+                                attributes : {
+                                "required": "",
+                                "name": "radio",
+                                "checked": "true"
+                                }})%>
+                              <%- include("/atoms/input/input-radio",{
+                                text: "保健指導に関するお問い合わせ",
+                                id: "radioid2",
+                                attributes : {
+                                "required": "",
+                                "name": "radio"
+                                }})%>
+                              <%- include("/atoms/input/input-radio",{
+                                text: "個人情報に関するお問い合わせ",
+                                id: "radioid3",
+                                attributes : {
+                                "required": "",
+                                "name": "radio"
+                                }})%>
+                              <%- include("/atoms/input/input-radio",{
+                                text: "××××に関するお問い合わせ",
+                                id: "radioid4",
+                                attributes : {
+                                "required": "",
+                                "name": "radio"
+                                }})%>
+                            </div><!--m-form-block__body-->
+                          </div><!--m-form-block m-form-block--radio-->
+                        </div><!-- o-grid-col -->
+                      </div><!-- o-grid-row -->
+                      <div class="o-grid-row o-grid-row--form-btns">
+                        <div class="o-grid-col o-grid-col-sm-12">
+                          <div class="m-btn-group">
+                            <div class="m-btn-group__main">
+                              <button class="a-btn a-btn--long a-btn--icon--right" type="submit">次へ<i class="a-icon a-icon--blt-toRight-circled">&emsp;</i></button>
+                            </div>
+                          </div><!--m-btn-group-->
+                        </div><!--o-grid-col-->
+                      </div><!--o-grid-row-->
+                    </div><!-- o-grid-container -->
+                  </form>
+
+            </section><!-- o-card -->
+          </div><!-- o-grid-col -->
+        </div><!-- o-grid-row -->
+      </div><!-- o-grid-container -->
+    </main><!-- o-main -->
+    <%- include("/organisms/footer/footer--simple") %>
+  </div>
+</div>
+<%- include("/organisms/foot/foot") %>

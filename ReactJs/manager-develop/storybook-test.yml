@@ -1,0 +1,40 @@
+version: '3.1'
+services: 
+  selenium-standalone:
+    image: selenium/standalone-chrome:3.4.0-francium
+    volumes:
+      - /dev/shm:/dev/shm #Mitigates the Chromium issue described at https://code.google.com/p/chromium/issues/detail?id=519952
+    networks:
+      - backend
+  manager-storybook:
+    container_name: manager_storybook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src/src
+    entrypoint: yarn storybook
+    depends_on:
+      - selenium-standalone
+    networks:
+      - backend
+  storybook-test:
+    container_name: storybook_test
+    environment:
+      - DOCKER=true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src/src
+      - ./e2e:/src/e2e
+      - ./storybook-test-results:/src/storybook-test-results
+      - /etc/passwd:/etc/passwd
+      - /etc/group:/etc/group
+    entrypoint: ["./scripts/storybook_entrypoint.sh"]
+    depends_on:
+      - manager-storybook
+    networks:
+      - backend
+networks:
+  backend:

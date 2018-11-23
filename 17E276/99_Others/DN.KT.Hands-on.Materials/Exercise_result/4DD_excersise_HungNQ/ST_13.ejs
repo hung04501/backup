@@ -1,0 +1,90 @@
+<%- include("/organisms/head/head", {title: "お問い合わせ 完了 ┃ ippo-ippo WEB"}) %>
+<div class="o-content">
+  <%- include("/organisms/sidebar/sidebar") %>
+  <div class="o-content__inner">
+    <%- include("/organisms/header/header") %>
+    <main class="o-main">
+      <div class="o-grid-container">
+        <div class="o-grid-row">
+          <div class="o-grid-col o-grid-col-sm-12">
+            <section class="o-card">
+              <div class="o-grid-container ">
+                <div class="o-grid-row">
+                  <div class="o-grid-col o-grid-col-sm-12 o-grid-col--narrow-center">
+                    <%- include("/molecules/heading/heading", {title: "お問い合わせ", titleEn: "Contact"}) %>
+                    <form action="#" data-parsley-validate="" class="o-form">
+                    <div class="m-form-block m-form-block--radio">
+                        <div class="m-form-block__body">
+                            <div class="o-grid-col o-grid-col-sm-12 a-text-gray">
+                                <div class="m-heading m-heading--lv2 ">
+                                    <div class="m-heading__main">
+                                            <div class="o-grid-container">
+                                                <div class="o-grid-row">
+                                                <h2 class="m-heading__title a-text-16">お問合わせの種別を選んでください。</h2>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%- include("/atoms/input/input-radio",{
+                                text: "サービスの使い方に関するお問い合わせ",
+                                id: "radioid1",
+                                attributes : {
+                                "name": "address-send-to",
+                                "checked": "checked",
+                                "data-change-require-target": "home",
+                                }
+                            })%>
+
+
+                            <%- include("/atoms/input/input-radio",{
+                            text: "保健指導に関するお問い合わせ",
+                            id: "radioid2",
+                            attributes : {
+                                "name": "address-send-to",
+                                "data-change-require-target": "home",
+                            }
+                            })%>
+
+
+                            <%- include("/atoms/input/input-radio",{
+                            text: "個人情報に関するお問い合わせ",
+                            id: "radioid3",
+                            attributes : {
+                                "name": "address-send-to",
+                                "data-change-require-target": "home",
+                            }
+                            })%>
+
+
+                            <%- include("/atoms/input/input-radio",{
+                            text: "××××に関するお問い合わせ",
+                            id: "radioid4",
+                            attributes : {
+                                "name": "address-send-to",
+                                "data-change-require-target": "home",
+                            }
+                            })%>
+
+                        </div>
+                    </div>
+                <div class="o-grid-row o-grid-col-narrow-gutter">
+                  <div class="m-btn-group">
+                    <div class="m-btn-group__main">
+                      <button class="a-btn a-btn--long a-btn--icon--right" type="submit">次へ<i class="a-icon a-icon--blt-toRight-circled">&emsp;</i></button>
+                    </div>
+                  </div>
+                </div>
+                </form>
+                  </div>
+                </div>
+              </div><!-- o-grid-container -->
+            </section><!-- o-card -->
+          </div><!-- o-grid-col -->
+        </div><!-- o-grid-row -->
+      </div><!-- o-grid-container -->
+    </main><!-- o-main -->
+    <%- include("/organisms/footer/footer") %>
+  </div>
+</div>
+<%- include("/organisms/foot/foot") %>

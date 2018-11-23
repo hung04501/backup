@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()" >
+  <div class="container">
+    <label>
+      <b>Username</b>
+    </label>
+    <input type="text" placeholder="Enter Username" name="uname" required formControlName="username">
+    <br >
+    <label>
+      <b>Password</b>
+    </label>
+    <input type="password" placeholder="Enter Password" name="psw" required formControlName="password">
+    <p *ngIf="error | async " class="loginError">
+      {{ error | async}}
+    </p>
+    <p *ngIf="pending | async ">Getting you in...</p>
+    <br>
+    <button type="submit" [disabled]="!form.valid">Login</button>
+  </div>
+</form>

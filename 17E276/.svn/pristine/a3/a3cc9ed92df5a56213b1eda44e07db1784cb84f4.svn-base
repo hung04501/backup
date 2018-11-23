@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    /* width: 100%; */
+    margin: auto;
+    width: 1280px;
+    height: 1483px;
+}
+menu {
+  width: 32px;
+  height: 23px;
+  margin-left: 40px;
+  margin-top: 42px;
+}
+
+#reserve{
+  width: 144px;
+  height: 32px;
+  background-color: #41b6e6;
+  color: white;
+  font-size: 12pt;
+  border-radius: 16px 16px 16px 16px;
+  margin-bottom: 49px;
+  margin-left: 1096px;
+  margin-right: 40px;
+}
+
+header {
+  width: 1024px;
+  height: 280px;
+  background-color: #cce198;
+  margin-bottom: 122px;
+  margin-left: 128px;
+}
+
+
+article {
+  width: 1024px;
+  height: 730px;
+  background-color: #00b7ee;
+  margin-left: 128px;
+}
+
+#pages{
+  margin-top: 47px;
+  margin-left: 493px;
+  margin-bottom: 175px;
+}
+
+#pages .number{
+  padding-left: 53px;
+  color: #41b6e6;
+  font-size: 15pt;
+}
+#active {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 50%;
+  background : #ffde00;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<menu>
+<img src="menu.png"/>
+</menu>
+<button id="reserve">Reserve</button>
+<header>
+   
+</header>
+  
+
+
+<article>
+  
+</article>
+
+<div id="pages">
+  <span class="number" id="active">1</span>
+  <span class="number">2</span>
+  <span class="number">3</span>
+  <span class="number">4</span>
+</div>
+
+</div>
+
+</body>
+</html>

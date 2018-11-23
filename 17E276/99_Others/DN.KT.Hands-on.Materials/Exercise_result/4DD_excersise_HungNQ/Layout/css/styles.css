@@ -1,0 +1,62 @@
+div.container {
+  margin: auto;
+  max-width: 1280px;
+  padding:42px 40px 0px 40px;
+  box-sizing: border-box;
+}
+
+div.wrapper{
+margin:54px 88px 0px 88px;
+}
+.menu {
+display: flex;
+justify-content: space-between;
+}
+
+.btn-reserve{
+background-color: #41b6e6;
+color: white;
+font-size: 12pt;
+border-radius: 16px;
+width:144px;
+height: 32px;
+}
+
+.header {
+height: 280px;
+background-color: #cce198;
+margin-bottom: 122px;
+}
+
+
+.article {
+height: 730px;
+background-color: #00b7ee;
+margin-bottom: 32px;
+}
+
+ul.paging {
+width: 300px;
+height: 40px;
+list-style-type: none;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+justify-content:space-around;
+line-height:40px;
+}
+li.number>a{
+color: #41b6e6;
+font-size: 15pt;
+text-decoration: none;
+}
+
+li.active{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background : #ffde00;
+line-height: 40px;
+text-align: center;
+display: inline-block;
+}

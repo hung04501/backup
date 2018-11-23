@@ -1,0 +1,161 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    /* fix for scrollbar compoensation */
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+.tac {
+  text-align: center;
+}
+
+.dif {
+  display: inline-flex;
+}
+
+a {
+  text-decoration: none;
+  color: #3683DC;
+  cursor: pointer;
+}
+
+/* 
+* do not show the ada chat app button site-wide
+*/
+.ada-chat-button {
+  display: none !important;
+}
+
+a.blue {
+  transition: color 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+a.blue:visited {
+  color: #3683DC;
+}
+
+a.blue:hover {
+  color: #4D99F1;
+}
+
+a.blue:active {
+  color: #2466B3;
+}
+
+a.black {
+  color: #32363C;
+}
+
+a.black:visited {
+  color: #32363C;
+}
+
+a.black:hover {
+  color: #32363C;
+  text-decoration: underline;
+}
+
+a.black:active {
+  text-decoration: underline;
+}
+
+:focus {
+  outline: 1px dotted #999;
+}
+
+/* Scrollbars (webkit only) */
+/* ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+::-webkit-scrollbar-thumb {
+  background: #3683DC;
+} */
+
+/* Reusable Classes */
+.mlMain {
+  width: 100%;
+  flex-basis: 100%;
+}
+.mlSidebar {
+  width: 100%;
+  flex-basis: 100%
+}
+@media (min-width: 1280px) {
+  .mlMain {
+    max-width: 78.8%;
+    flex-basis: 78.8%
+  }
+  .mlSidebar {
+    max-width: 21.2%;
+    max-width: 21.2%;
+    padding-left: 24px !important;
+  }
+}
+.p0 {
+  padding: 0 !important;
+}
+.m0 {
+  margin: 0 !important;
+}
+.px0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.py0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.mx0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.my0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-table {
+  animation: fadeIn .3s ease-in-out;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+        <link rel="stylesheet" type="text/css" href="demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <img class="menu" src="menu.png"/>
+                <div class="button">
+                    <p class="Reserve">Reserve</p>
+                </div>
+            </div>
+            <div class="contentOne">
+            </div>
+            <div class="contentTwo"></div>
+            <div class="paper">
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">__</a>
+                    <a href="#">11</a>
+                </div>
+             </div>
+        </div>        
+    </body>
+</html>

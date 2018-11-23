@@ -1,0 +1,67 @@
+.container {
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-top: 38px;	 
+}
+
+.header {
+	height: 35px;
+}
+
+
+.right_menu {
+  background-color: rgb(65, 182, 230);
+  position: absolute;
+  left: 1096px;
+  top: 38px;
+  width: 144px;
+  height: 32px;
+  z-index: 24;
+  border-radius: 16px;
+  font-size: 12px;
+  font-family: "ProximaNova";
+  color: #ffffff;
+  text-transform: uppercase;
+ text-align: center;
+}
+
+.content {
+
+}
+
+.top_content{
+	height: 335px;
+	margin-left: 88px;
+	margin-right: 88px; 
+}
+
+.title_top_content{
+	margin-top: 48px;
+	height: 280px;
+	background-color: #cce198;
+}	
+
+.article {
+	margin-top: 125px;
+	height: 730px;
+	background-color: #00b7ee;
+}
+
+.page {
+	margin-top: 30px;
+	margin-left: 265px;
+
+}
+
+.pagination { display: inline-block; }  
+
+.pagination a { 
+	font-family: "ProximaNova";
+	color: #41b6e6; 
+	float: left; 
+	padding: 8px 16px; 
+	text-decoration: none; 
+}  
+.pagination a.active { background-color: rgb(255, 222, 0); color: white; border-radius: 50%; }  
+.pagination a:hover:not(.active) { background-color: rgb(255, 222, 0); color: white; border-radius: 50%; }
+

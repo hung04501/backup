@@ -1,0 +1,32 @@
+@import '~libs/assets/scss/index';
+
+/*
+ * block
+ **/
+:host { //a-textfieldに相当
+  display: inline-block;
+  position: relative;
+}
+
+/*
+ * block__elements
+ **/
+.__body { //a-textfield__body に相当
+  width: 100%;
+  /*
+  * block--modifiers block__elements
+  **/
+}
+
+/*
+* block__elements
+**/
+.__border { //a-textfield__border に相当
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: $color-sub;
+}

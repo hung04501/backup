@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+</head>
+<style>
+  .main {
+    background-color: #f6f6f6;
+    width: 1280px;
+    height: 1483px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: auto;
+  }
+
+  .top {
+    background-color: #cce198;
+    margin-top: 120px;
+    margin-left: 128px;
+    margin-right: 128px;
+    width: 1024px;
+    height: 280px;
+    position: absolute;
+  }
+
+  .bot {
+    background-color: #00b7ee;
+    margin-top: 525px;
+    margin-left: 128px;
+    margin-right: 128px;
+    width: 1024px;
+    height: 730px;
+    position: absolute;
+  }
+
+  .image {
+    margin-left: 40px;
+    float: left;
+    width: 32px;
+    height: 32px;
+  }
+
+  .header {
+    margin-top: 44px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .imageFoot {
+    text-align: center;
+    margin: auto;
+    margin-top: 1288px;
+    width: 290px;
+    height: 40px;
+  }
+
+  .button {
+    background-color: rgb(65, 182, 230);
+    position: absolute;
+    left: 1096px;
+    width: 144px;
+    height: 32px;
+    border-radius: 16px;
+  }
+
+  .Reserve {
+    color: #ffffff;
+    margin-top: -0px;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .paper {
+    position: absolute;
+    left: 508px;
+    top: 1294px;
+    width: 280px;
+    height: 50px;
+    z-index: 11;
+  }
+
+  .pagination {
+    display: inline-block;
+  }
+
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  .pagination a.active {
+    background-color: rgb(255, 222, 0);
+    color: white;
+    border-radius: 50%;
+  }
+
+  .pagination a:hover:not(.active) {
+    background-color: rgb(255, 222, 0);
+    color: white;
+    border-radius: 50%;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <div class="header">
+        <div>
+          <img class="image" src="menu.png">
+        </div>
+        <div class="button">
+          <p class="Reserve">Reserve</p>
+        </div>
+      </div>
+      <div class="top">
+      </div>
+      <div class="bot">
+      </div>
+      <div class="imageFoot">
+        <div class="pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">...</a>
+          <a href="#">11</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

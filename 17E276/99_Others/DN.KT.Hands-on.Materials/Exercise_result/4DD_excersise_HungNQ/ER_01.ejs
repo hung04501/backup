@@ -1,0 +1,38 @@
+<%- include("/organisms/head/head", {title: "パスワードの再設定 メール送信完了 ┃ ippo-ippo WEB"}) %>
+<div class="o-content o-content--no-sidebar">
+  <div class="o-content__inner">
+    <%- include("/organisms/header/header--simple") %>
+    <main class="o-main">
+        <div class="o-grid-container">
+        <div class="o-grid-row">
+            <div class="o-grid-col o-grid-col-sm-12">
+            <section class="o-card">
+              <div class="o-grid-container">
+                <div class="o-grid-row">
+                  <div class="o-grid-col o-grid-col-sm-12">
+                    <%- include("/molecules/board/board--completed", {
+                        icon: "info--gray",
+                        title: "エラー",
+                        text: "XXXXXXに誤りがあります。<br>（エラーテンプレート）"
+                    }) %>
+            </div><!-- o-grid-col -->
+        </div><!-- o-grid-row -->
+        <div class="o-grid-row o-grid-row--narrow-gutter">
+            <div class="o-grid-col o-grid-col-sm-12">
+            <div class="m-btn-group">
+                <div class="m-btn-group__main">
+                <a class="a-btn a-btn--long a-btn--icon--right" href="#">TOPに戻る<i class="a-icon a-icon--blt-toRight-circled">&emsp;</i></a>
+                </div>
+            </div>
+            </div><!-- o-grid-col -->
+        </div><!-- o-grid-row -->
+        </div><!-- o-grid-container -->
+             </section><!-- o-card -->
+          </div><!-- o-grid-col -->
+        </div><!-- o-grid-row -->
+      </div><!-- o-grid-container -->
+    </main><!-- o-main -->
+    <%- include("/organisms/footer/footer") %>
+  </div>
+</div>
+<%- include("/organisms/foot/foot") %>

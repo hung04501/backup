@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <img src="menu.png"/>
+      <button class="btn-reserve">Reserve</button>
+    </div>
+    <div class="wrapper">
+      <div class="header"></div>
+      <div class="article"></div>
+      <ul class="paging">
+        <li class="number active">1</li>
+        <li class="number"><a href="">2</a></li>
+        <li class="number"><a href="">3</a></li>
+        <li class="number"><a href="">4</a></li>
+        <li class="number"><a href="">5</a></li>
+        <li class="number"><a href="">6</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

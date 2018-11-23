@@ -1,0 +1,6 @@
+node_modules
+dist
+build
+localStorage.json
+src
+e2e
